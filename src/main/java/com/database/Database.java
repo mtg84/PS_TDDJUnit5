@@ -1,5 +1,7 @@
 package com.database;
 
+import com.airport.Flight;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +22,27 @@ public class Database {
 
     public List<List<String>> queryFlightsDatabase() {
         return queriedData;
+    }
+
+    public double averageDistance(List<Flight> flightsList) {
+        return flightsList.stream()
+                .mapToDouble(Flight::getDistance)
+                .average()
+                .getAsDouble();
+    }
+
+    public int minimumDistance(List<Flight> flightsList) {
+        return flightsList.stream()
+                .mapToInt(Flight::getDistance)
+                .min()
+                .getAsInt();
+    }
+
+    public int maximumDistance(List<Flight> flightsList) {
+        return flightsList.stream()
+                .mapToInt(Flight::getDistance)
+                .max()
+                .getAsInt();
     }
 
 }
