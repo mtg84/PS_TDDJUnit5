@@ -1,5 +1,7 @@
 package com.airport;
 
+import java.util.Objects;
+
 public class Passenger {
 
     private String name;
@@ -18,5 +20,28 @@ public class Passenger {
     public boolean isVip() {
         return vip;
     }
+
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Passenger passenger = (Passenger) obj;
+        return Objects.equals(name, passenger.name);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
 
 }
