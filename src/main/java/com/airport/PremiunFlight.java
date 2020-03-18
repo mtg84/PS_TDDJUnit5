@@ -9,7 +9,7 @@ public class PremiunFlight extends Flight {
     @Override
     public boolean addPassenger(Passenger passenger) {
         if (passenger.isVip()) {
-            return passengerList.add(passenger);
+            return passengerSet.add(passenger);
         }
         return false;
     }
@@ -17,7 +17,7 @@ public class PremiunFlight extends Flight {
     @Override
     public boolean removePassenger(Passenger passenger) {
         if (passenger.isVip()) {
-            return passengerList.remove(passenger);
+            return passengerSet.remove(passenger);
         }
         return false;
     }

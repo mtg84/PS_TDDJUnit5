@@ -1,11 +1,13 @@
 package com.airport;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Flight {
 
     private String id;
-    List<Passenger> passengerList = new ArrayList<Passenger>();
+    Set<Passenger> passengerSet = new HashSet<>();
 
 
     public Flight(String id) {
@@ -17,16 +19,9 @@ public abstract class Flight {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
-    public List<Passenger> getPassengerList() {
-        return Collections.unmodifiableList(passengerList);
-    }
-
-    public void setPassengerList(List<Passenger> passengerList) {
-        this.passengerList = passengerList;
+    public Set<Passenger> getPassengerSet() {
+        return Collections.unmodifiableSet(passengerSet);
     }
 
 
