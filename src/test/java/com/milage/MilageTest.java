@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class MilageTest {
+public class MilageTest {
 
     private Milage milage;
 
