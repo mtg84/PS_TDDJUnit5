@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class AirConditioningSystemTest {
+public class AirConditioningSystemTest {
 
     @InjectMocks
     AirConditioningSystem airConditioningSystem;

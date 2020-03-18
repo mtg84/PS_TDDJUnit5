@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class ThermometherTest {
+public class ThermometherTest {
 
     @InjectMocks
     Thermomether thermomether;
